@@ -1,0 +1,21 @@
+{
+  "name": "ts-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "entry.ts",
+  "author": "Filip Majerík (koduj.dev) & ICT Pro s.r.o.",
+  "license": "ISC",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "start": "vite --host --port 3000"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "@typescript-eslint/eslint-plugin": "^8.29.1",
+    "@typescript-eslint/parser": "^8.29.1",
+    "eslint": "^9.24.0",
+    "typescript": "5.8.3",
+    "vite": "6.2.6",
+    "vite-plugin-eslint": "^1.8.1"
+  }
+}
