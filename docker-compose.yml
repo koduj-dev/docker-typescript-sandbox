@@ -5,8 +5,8 @@ services:
     image: koduj.dev/ts-sandbox:latest
     container_name: ts-sandbox
     volumes:
-      - ./sandbox:/app/sandbox
-      - ./work:/app/work
+      - ./sandbox:/app/sandbox:consistent
+      - ./work:/app/work:consistent
     working_dir: /app
     stdin_open: true
     tty: true
