@@ -1,0 +1,24 @@
+import {createRouter, createWebHistory, type Router} from "vue-router";
+
+const routes = [
+  {
+    path: '/',
+    name: 'home',
+    component: () => import('@/components/FirstComponent.vue'),
+  },
+  {
+    path: '/second',
+    name: 'second',
+    component: () => import('@/components/SecondComponent.vue'),
+  },
+  {
+    path: '/todo',
+    name: 'todo',
+    component: () => import('@/components/Todo/TodoList.vue'),
+  }
+];
+
+export const router: Router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
