@@ -22,10 +22,10 @@ function reset(): void {
   <Card>
     <template #title>Nové Todo:</template>
     <template #content>
-      Název: <InputText type="text" v-model="model.title" />
+      Název: <InputText type="text" v-model="model.title" placeholder="Název Todo" />
       <div>
         Popis: <br>
-        <Textarea v-model="model.content" />
+        <Textarea v-model="model.content" placeholder="Popis Todo" />
       </div>
     </template>
     <template #footer>

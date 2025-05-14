@@ -1,12 +1,14 @@
 <script setup lang="ts">
 
-import {reactive, type Ref, ref, watchEffect} from "vue";
+import { reactive, type Ref, ref, watch, watchEffect } from 'vue'
 import { onMounted, onUnmounted, computed } from "vue";
 import type {BoxEmitsSetInputsPayload, PersonForm} from "@/types";
 import SecondComponent from "@/components/SecondComponent.vue";
 import ThirdComponent from "@/components/ThirdComponent.vue";
 
 const numberArray: Ref<number[]> = ref([1,2,3,4,5]);
+
+// není reaktivní
 const url: string = "http://odkazjinam.cz";
 
 const inputValue: Ref<string> = ref("");
@@ -21,13 +23,13 @@ const person: PersonForm = reactive({
   age: 0,
 });
 
-/**
+// sleduje pouze uvedenou hodnotu
 watch(joinedValues, (newVal, oldVal) => {
   console.warn(newVal, oldVal);
-}); */
+});
 
-watchEffect(() => {
-  console.error(": ", joinedValues.value);
+watchEffect(() => { // sleduje všechny vnější reaktivní hodnoty
+  console.error("values: ", inputValue.value, inputValue2.value);
 });
 
 function onButtonClick(): void {

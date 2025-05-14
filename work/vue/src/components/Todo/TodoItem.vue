@@ -17,7 +17,7 @@ function completeTodo(): void {
 </script>
 
 <template>
-  <Card>
+  <Card data-testid="todo-item">
     <template #title><span>{{ props.item.completed ? '✅' : '❌' }}</span> {{ props.item.title }}</template>
     <template #content>{{ props.item.content }}</template>
 

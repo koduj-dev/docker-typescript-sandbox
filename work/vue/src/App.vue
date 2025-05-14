@@ -15,7 +15,7 @@ const menuItems: Ref<MenuItem[]> = ref([
     class: computed(() => route.name === 'home' ? 'menu-active' : '')
   }, {
     label: 'Second',
-    icon: 'pi pi-contact',
+    icon: 'pi pi-cog',
     command: () => router.push({ name: 'second' }),
     class: computed(() => route.name === 'second' ? 'menu-active' : '')
   }, {
@@ -23,6 +23,10 @@ const menuItems: Ref<MenuItem[]> = ref([
     icon: 'pi pi-book',
     command: () => router.push({ name: 'todo' }),
     class: computed(() => route.name === 'todo' ? 'menu-active' : '')
+  }, {
+    label: 'Hotel',
+    icon: 'pi pi-home',
+    command: () => router.push({ name: 'rooms' }),
   }
 ]);
 
@@ -32,6 +36,8 @@ const menuItems: Ref<MenuItem[]> = ref([
   <div>
     <Menubar :model="menuItems" />
 
-    <router-view />
+    <div class="p-4">
+      <router-view />
+    </div>
   </div>
 </template>

@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import type {BoxEmits, BoxProps} from "@/types";
 
-const props = defineProps<BoxProps>();
+const props = withDefaults(defineProps<BoxProps>(), {
+  title: "Defaultní titulek",
+  content: "Defaultní content",
+});
 const emits = defineEmits<BoxEmits>();
 
 function clearInputs(): void {

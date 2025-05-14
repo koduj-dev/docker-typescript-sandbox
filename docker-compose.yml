@@ -12,6 +12,7 @@ services:
     tty: true
     ports:
       - "12000:3000"
+      - "51204:51204"
     networks:
       - koduj-dev
 

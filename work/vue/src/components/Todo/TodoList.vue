@@ -40,7 +40,9 @@ watch(todoList.value, (newTodoList): void => {
 
 onMounted(() => {
   const todoItems: TodoItem[] = JSON.parse(localStorage.getItem("todoList") as string);
-  todoList.value.push(...todoItems);
+  if (todoItems) {
+    todoList.value.push(...todoItems);
+  }
 })
 
 </script>

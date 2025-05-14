@@ -34,3 +34,26 @@ export interface TodoItemEmits {
   (e: 'completeTodo', payload: TodoItem): void;
   (e: 'removeTodo'): void;
 }
+
+export interface Room {
+  '@id': string | null;
+  id: number | null;
+  name: string;
+  capacity: number;
+  price: number;
+}
+
+export interface Reservation {
+  id: number | null;
+  room: number | string | null;
+  guestName: string;
+  guests: number | null;
+  totalPrice: number;
+  startDate: Date | null;
+  endDate: Date | null;
+  nights: number;
+  isPaid: boolean;
+  createdAt: Date | null;
+  updatedAt: Date | null;
+}
+
